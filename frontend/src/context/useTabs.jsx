@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { createContext, useState } from "react";
 
 const tabContext = createContext(null);
@@ -9,7 +10,9 @@ export function useTabs() {
 export function TabsProvider({ children }) {
   const [currentTab, setCurrentTab] = useState(0);
 
-  const openTab = tabId => setCurrentTab(() => tabId);
+  const openTab = tabId => {
+    return () => setCurrentTab(() => tabId);
+  }
 
   return <tabContext.Provider value={{
     currentTab,
