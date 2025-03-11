@@ -2,10 +2,9 @@ import HeroSection from './pages/HeroSection';
 const App = () => {
   return (
     <>
-    <div>
-      <HeroSection />
-    </div>
-    
+      <div>
+        <HeroSection />
+      </div>
     </>
   );
 };

@@ -35,13 +35,13 @@ export default function HeroSection() {
     <div className="min-h-screen w-full">
       <header className="p-4 flex bg-transparent justify-end items-center fixed right-0 top-0 z-20 text-slate-300">
         <SignedOut>
-          <SignInButton className="btn bg-transparent text-white border-2 btn-lg" />
+          <SignInButton className="btn btn-ghost btn-lg" />
         </SignedOut>
         <SignedIn>
           <UserButton />
         </SignedIn>
       </header>
-      
+
       {/* Hero Section */}
       <AuroraBackground>
         <div className="flex flex-col items-center justify-center min-h-screen w-full">
@@ -50,22 +50,22 @@ export default function HeroSection() {
           </h1>
           <SignedOut>
             <SignInButton mode="modal">
-              <button className="btn bg-transparent text-white border-2 scale-130 mr-2">
+              <button className="btn btn-primary btn-lg">
                 Get Started
               </button>
             </SignInButton>
           </SignedOut>
         </div>
       </AuroraBackground>
-      
+
       {/* Hackathons Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center tracking-tighter">Upcoming Hackathons</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {hackathons.map((hackathon) => (
-              <div key={hackathon.id} className="card bg-base-100 w-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gray-800 text-white">
+              <div key={hackathon.id} className="card bg-base-100 w-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-white">
                 <figure className="h-48 overflow-hidden">
                   <img
                     src={hackathon.image}
