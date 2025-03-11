@@ -1,10 +1,19 @@
 import HeroSection from './pages/HeroSection';
+import Event from "./pages/Event";
+import Layout from './pages/Layout';
+import { Route, Routes } from 'react-router-dom';
 const App = () => {
   return (
     <>
-    <div>
-      <HeroSection />
-    </div>
+    <Routes>
+      <Route path="/" element ={<Layout/>}>
+          <Route path="" element={<HeroSection/>} />
+
+          {/* protected route */}
+          <Route path="event" element={<Event/>} />
+
+      </Route>
+    </Routes>
     
     </>
   );

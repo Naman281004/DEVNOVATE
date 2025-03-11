@@ -65,7 +65,7 @@ export default function HeroSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {hackathons.map((hackathon) => (
-              <div key={hackathon.id} className="card bg-base-100 w-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gray-800 text-white">
+              <div key={hackathon.id} className="card w-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gray-800 text-white">
                 <figure className="h-48 overflow-hidden">
                   <img
                     src={hackathon.image}
