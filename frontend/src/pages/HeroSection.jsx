@@ -1,6 +1,7 @@
 import React from 'react'
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
 import { AuroraBackground } from '../components/aurora-background'
+import { Link } from 'react-router-dom'
 
 export default function HeroSection() {
   return (
@@ -19,13 +20,19 @@ export default function HeroSection() {
           <h1 className="text-8xl font-bold text-center text-white tracking-tighter mb-8">
             Devnovate
           </h1>
-          <SignedOut>
-            <SignInButton mode="modal">
-              <button className="btn btn-primary btn-lg">
-                Get Started
-              </button>
-            </SignInButton>
-          </SignedOut>
+          <div className="flex gap-2">
+            <SignedOut>
+              <SignInButton mode="modal">
+                <button className="btn btn-primary btn-lg">
+                  Get Started
+                </button>
+              </SignInButton>
+
+              <SignInButton mode="modal">
+                <Link to="/create" className="btn btn-lg">Host Event</Link>
+              </SignInButton>
+            </SignedOut>
+          </div>
         </div>
       </AuroraBackground>
     </div>
